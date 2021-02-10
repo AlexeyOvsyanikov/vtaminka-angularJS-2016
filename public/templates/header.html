@@ -1,0 +1,62 @@
+<header class="headerTop ">
+    <div class="wrapper clearfix">
+        <div class="menuThin visible-sm-inline-block visible-xs-inline-block">
+            <a ui-sref="home" class="dropdown-toggle smallMenuA">T</a>
+        </div>
+
+        <div class="delimetersmall delimeter visible-sm-inline-block visible-xs-inline-block"></div>
+        <div class="lang">
+            <select
+                    id="langs"
+                    class="cs-select cs-skin-rotate"
+                    ng-model="currentLang"
+                    langs="langs"
+                    langs-option-directive
+            ></select>
+        </div>
+
+        <div class="delimeter"></div>
+        <div class="cart">
+            <a  ui-sref="cart">
+                <span class="cartIcon">n</span>
+                <span class="cartCount" ng-bind="cart.length" ></span>
+            </a>
+        </div>
+        <div class="menu hidden-sm hidden-xs">
+            <nav class="topMenu cl-effect-2">
+                <a ui-sref="home" translate >LAYOUT_MAIN_LINK</a>
+                <a ui-sref="home" translate >LAYOUT_PRODUCTS_LINK</a>
+                <a ui-sref="news" translate>LAYOUT_BLOG_LINK</a>
+                <a href="about_us.html" translate >LAYOUT_ABOUT_LINK</a>
+                <a href="contacts.html" translate >LAYOUT_CONTACTS_LINK</a>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+<header class="header ">
+    <div class="wrapper">
+        <div id='menuOpen' class="hidden menuThin visible-sm-inline-block visible-xs-inline-block">
+            <a ui-sref="home" class="dropdown-toggle smallMenuA" >T</a>
+        </div>
+        <div class="logo">
+            <a ui-sref="home"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="cart">
+            <a ui-sref="cart">
+                <span class="cartIcon">n</span>
+                <span class="cartCount" ng-bind="cart.length"></span>
+            </a>
+        </div>
+        <div class="menu hidden-sm hidden-xs">
+            <nav class="mainMenu cl-effect-5">
+                <a ui-sref="home" ><span data-hover="{{ 'LAYOUT_CATEGORY_MENS' | translate}}" translate>LAYOUT_CATEGORY_MENS</span></a>
+                <a ui-sref="home" ><span data-hover="{{ 'LAYOUT_CATEGORY_WOMENS' | translate }}" translate>LAYOUT_CATEGORY_WOMENS</span></a>
+                <a ui-sref="home" ><span data-hover="{{ 'LAYOUT_CATEGORY_CHILD' | translate }}" translate>LAYOUT_CATEGORY_CHILD</span></a>
+                <a ui-sref="home" ><span data-hover="{{ 'LAYOUT_CATEGORY_SPORTS' | translate}}" translate>LAYOUT_CATEGORY_SPORTS</span></a>
+            </nav>
+        </div>
+
+    </div>
+</header>

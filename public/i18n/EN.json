@@ -1,0 +1,43 @@
+{
+
+  "LAYOUT_MAIN_LINK": "Home",
+  "LAYOUT_MAIN_MENU": "Menu",
+  "LAYOUT_MAIN_PRODUCTS": "Catalogue",
+  "LAYOUT_MAIN_MORE_PRODUCTS": "More",
+  "LAYOUT_PRODUCTS_LINK": "Products",
+  "LAYOUT_BLOG_LINK": "Blog",
+  "LAYOUT_ABOUT_LINK": "About",
+  "LAYOUT_CONTACTS_LINK": "Contacts",
+  "LAYOUT_NEWS_LINK": "News",
+  "LAYOUT_CONTACT_US": "Contact us!",
+  "LAYOUT_CONNECT_TO_US": "Connect to us!",
+  "LAYOUT_CATEGORIES": "Categories",
+  "LAYOUT_LAST_NEWS": "Last news",
+
+  "LAYOUT_AUTHORIZE": "Авторизация",
+  "LAYOUT_REGISTRATION": "Регистрация",
+  "LAYOUT_SEND": "Send",
+  "LAYOUT_NAME": "Name",
+  "LAYOUT_EMAIL": "Email",
+  "LAYOUT_PHONE": "Phone",
+  "LAYOUT_ADDRESS": "Address",
+  "LAYOUT_PERSONAL_INFORMATION": "Personal information",
+  
+  "LAYOUT_CART_TOTAL": "Total",
+  "LAYOUT_CART_TITLE": "Cart",
+  "LAYOUT_CHECKOUT": "Checkout",
+  "LAYOUT_CONFIRM_ORDER": "Confirm",
+  "LAYOUT_DELIVERY": "Delivery",
+  "LAYOUT_ORDER_LIST": "Order list",
+  "LAYOUT_PROMO": "Promocode",
+  
+  "LAYOUT_CATEGORY_MENS": "Mens",
+  "LAYOUT_CATEGORY_WOMENS": "Womens",
+  "LAYOUT_CATEGORY_CHILD": "Child",
+  "LAYOUT_CATEGORY_SPORTS": "Contacts",
+
+  "LAYOUT_PRODUCT_IN_CART": "Already added",
+  "LAYOUT_PRODUCT_ADD_IN_CART": "Add to cart",
+  "LAYOUT_PRODUCT_DESCRIPTION": "Description"
+
+}

@@ -1,0 +1,31 @@
+{
+  "name": "vtaminka-angular-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
+    "angular": "^1.7.2",
+    "angular-loading-bar": "^0.9.0",
+    "angular-local-storage": "^0.7.1",
+    "angular-route": "^1.7.2",
+    "angular-translate": "^2.18.1",
+    "angular-translate-loader-partial": "^2.18.1",
+    "angular-translate-loader-static-files": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.12.13",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge-and-include-globally": "^2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,27 @@
+<section>
+    <div class="bannerSlim" style="background-image: url('images/banner.png');  background-position-y: 55%;">
+        <div class="bannerWrap"></div>
+        <h2 translate>LAYOUT_BLOG_LINK</h2>
+    </div>
+    <div class="wrapper clearfix">
+
+        <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w2.org/2000/svg" xmlns:xlink="http://www.w2.org/1999/xlink" focusable="false">
+                        <symbol id="ripply-scott" viewBox="0 0 100 100">
+                                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+                        </symbol>
+                </svg>
+        </div>
+
+        <div class="blog">
+            <div class="blogItemWrap whiteBg clearfix" ng-repeat="news in newsList">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 blogImg" style="background-image: url('https://cdn.shopify.com/s/files/1/0081/1222/files/PFTVGarageBanner.jpg?15467243644333960507'); ">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 blogTxt">
+                    <h3><a ui-sref="article({ id: news.id })">{{ news.title }}</a></h3>
+                    <p>{{ news.description }}</p>                        
+                </div>
+            </div>                                       
+        </div>
+    </div>
+</section>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="VtaminkaApplication" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <base href="/public" >
+
+    <link rel="shortcut icon" href="images/logoSmall.png">
+
+    <link rel="stylesheet" href="vendor.css">
+    <script src="vendor.js" ></script>
+    <script src="index.js" ></script>
+
+    <title>Vtaminka</title>
+
+</head>
+
+<body ng-controller="MainController" >
+
+    <div><span class="fa fa-spinner"></span></div>
+
+    <div class="snap-drawers">
+
+        <div class="snap-drawer snap-drawer-left">
+            <div class="side">
+                <h2 translate>LAYOUT_MAIN_MENU</h2>
+                <ul>
+                    <li><a ui-sref="home" translate>LAYOUT_MAIN_LINK</a></li>
+                    <li><a ui-sref="home" translate>LAYOUT_PRODUCTS_LINK</a></li>
+                    <li><a ui-sref="news" translate>LAYOUT_BLOG_LINK</a></li>
+                    <li><a ui-sref="home" translate>LAYOUT_ABOUT_LINK</a></li>
+                    <li><a ui-sref="home" translate>LAYOUT_CONTACTS_LINK</a></li>
+                </ul>
+
+                <h2 translate>LAYOUT_CATEGORIES</h2>
+                <ul>
+                    <li><a ui-sref="home" translate >LAYOUT_CATEGORY_MENS</a></li>
+                    <li><a ui-sref="home" translate >LAYOUT_CATEGORY_WOMENS</a></li>
+                    <li><a ui-sref="home" translate>LAYOUT_CATEGORY_CHILD</a></li>
+                    <li><a ui-sref="home" translate>LAYOUT_CATEGORY_SPORTS</a></li>
+                </ul>
+                <h2 translate>LAYOUT_CONTACTS_LINK</h2>
+                <p>email@Vtaminka.com</p>
+
+                <div class="socialSmall clearfix">
+                    <span class="social vk">E</span>
+                    <span class="social fb">B</span>
+                    <span class="social google">C</span>
+                    <span class="social tw">D</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="snap-content">
+
+            <div ui-view="header"></div>
+
+            <section ui-view="content" > </section>
+
+            <footer ui-view="footer" class="footerMenu clearfix hidden-sm hidden-xs ">
+                
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

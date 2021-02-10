@@ -1,0 +1,43 @@
+{
+
+  "LAYOUT_MAIN_LINK": "Главная",
+  "LAYOUT_MAIN_MENU": "Меню",
+  "LAYOUT_MAIN_PRODUCTS": "Каталог",
+  "LAYOUT_MAIN_MORE_PRODUCTS": "Еще",
+  "LAYOUT_PRODUCTS_LINK": "Товары",
+  "LAYOUT_BLOG_LINK": "Блог",
+  "LAYOUT_ABOUT_LINK": "О компании",
+  "LAYOUT_CONTACTS_LINK": "Контакты",
+  "LAYOUT_NEWS_LINK": "Новости",
+  "LAYOUT_CONTACT_US": "Свяжитесь с нами!",
+  "LAYOUT_CONNECT_TO_US": "Присоединяйтесь к нам",
+  "LAYOUT_CATEGORIES": "Категории",
+  "LAYOUT_LAST_NEWS": "последние статьи",
+
+  "LAYOUT_AUTHORIZE": "Авторизация",
+  "LAYOUT_REGISTRATION": "Регистрация",
+  "LAYOUT_SEND": "Отправить",
+  "LAYOUT_NAME": "Ваше имя",
+  "LAYOUT_EMAIL": "Контактный email",
+  "LAYOUT_PHONE": "Контактный телефон",
+  "LAYOUT_ADDRESS": "Адресс доставки",
+  "LAYOUT_PERSONAL_INFORMATION": "Персональные данные",
+
+  "LAYOUT_CART_TOTAL": "Итого",
+  "LAYOUT_CART_TITLE": "Корзина",
+  "LAYOUT_CHECKOUT": "Оформить заказ",
+  "LAYOUT_CONFIRM_ORDER": "Заказать",
+  "LAYOUT_DELIVERY": "Доставка",
+  "LAYOUT_ORDER_LIST": "Содержанимое заказа",
+  "LAYOUT_PROMO": "Введите промокод",
+
+  "LAYOUT_CATEGORY_MENS": "Мужские",
+  "LAYOUT_CATEGORY_WOMENS": "Женские",
+  "LAYOUT_CATEGORY_CHILD": "Детские",
+  "LAYOUT_CATEGORY_SPORTS": "Спортивные",
+
+  "LAYOUT_PRODUCT_IN_CART": "Уже в корзине",
+  "LAYOUT_PRODUCT_ADD_IN_CART": "В корзину",
+  "LAYOUT_PRODUCT_DESCRIPTION": "Описание"
+
+}

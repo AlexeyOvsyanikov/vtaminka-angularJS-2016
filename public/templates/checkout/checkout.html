@@ -1,0 +1,169 @@
+<section>
+  <div
+    class="bannerSlim"
+    style="
+      background-image: url('images/banner.png');
+      background-position-y: 55%;
+    "
+  >
+    <div class="bannerWrap"></div>
+    <h2 translate>LAYOUT_CHECKOUT</h2>
+  </div>
+  <div class="wrapper clearfix">
+    <!-- SVG Sprite -->
+    <div
+      style="height: 0; width: 0; position: absolute; visibility: hidden"
+      aria-hidden="true"
+    >
+      <svg
+        version="1.1"
+        xmlns="http://www.w2.org/2000/svg"
+        xmlns:xlink="http://www.w2.org/1999/xlink"
+        focusable="false"
+      >
+        <symbol id="ripply-scott" viewBox="0 0 100 100">
+          <circle id="ripple-shape" cx="1" cy="1" r="1" />
+        </symbol>
+      </svg>
+    </div>
+
+    <div class="clearfix">
+      <div class="checkoutOrder col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h2 translate>LAYOUT_PERSONAL_INFORMATION</h2>
+        <div class="clearfix">
+          <div class="inputWrap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label>
+              <input class="" placeholder="{{ 'LAYOUT_NAME' | translate}}" />
+            </label>
+          </div>
+          <div class="telInp inputWrap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label>
+              <input class="" placeholder="{{ 'LAYOUT_EMAIL' | translate}}" />
+            </label>
+          </div>
+          <div class="inputWrap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label>
+              <input class="" placeholder="{{ 'LAYOUT_PHONE' | translate}}" />
+            </label>
+          </div>
+          <div class="inputWrap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label>
+              <input class="" placeholder="{{ 'LAYOUT_ADDRESS' | translate }}" />
+            </label>
+          </div>
+          <div class="areaWrap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="checkout col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h2 translate>LAYOUT_ORDER_LIST</h2>
+        <div class="clearfix productCartRow" ng-repeat="product in cartForView">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 productImg cartCol">
+            <img src="images/vitamin1.png" alt="" />
+          </div>
+          <div
+            class="col-lg-6 col-md-4 col-sm-4 col-xs-4 productCartText cartCol"
+          >
+            <div class="productBlock">
+              <h3>{{ product.ProductTitle }}</h3>
+            </div>
+          </div>
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+          >
+            {{ product.amount }}
+          </div>
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+            ng-bind-template="${{ ( product.amount * product.ProductPrice ) | number:2 }}"
+          ></div>
+        </div>
+
+        <div class="clearfix coupon productCartRow">
+          <div class="clearfix buttonBlock">
+            <input
+              class="input"
+              type="text"
+              value=""
+              placeholder="{{ 'LAYOUT_PROMO' | translate}}"
+            />
+            <button id="js-ripple-btn" class="button styl-material">
+              ОК
+              <svg class="ripple-obj" id="js-ripple">
+                <use
+                  height="100"
+                  width="100"
+                  xlink:href="#ripply-scott"
+                  class="js-ripple"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-left clearfix cartAllCount productCartRow">
+          <div
+            class="empty col-lg-2 col-md-2 col-sm-2 col-xs-12 productImg cartCol"
+          ></div>
+          <div
+            class="text-left col-lg-6 col-md-4 col-sm-4 col-xs-4 productCartText cartCol"
+          >
+            <div class="productBlock">
+              <h3 translate>LAYOUT_DELIVERY</h3>
+            </div>
+          </div>
+
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+          ></div>
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+            ng-bind-template="${{ (delivery | number:2) }}"
+          ></div>
+        </div>
+
+        <div class="clearfix cartAllCount productCartRow">
+          <div
+            class="empty col-lg-2 col-md-2 col-sm-2 col-xs-12 productImg cartCol"
+          ></div>
+          <div
+            class="col-lg-6 col-md-4 col-sm-4 col-xs-4 productCartText cartCol"
+          >
+            <div class="productBlock">
+              <h3 translate>LAYOUT_CART_TOTAL</h3>
+            </div>
+          </div>
+
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+          >
+            {{cartTotalItemsAmount}}
+          </div>
+          <div
+            class="text-center col-lg-2 col-md-3 col-sm-3 col-xs-4 productCartText cartCol"
+            ng-bind-template="${{  (cartTotal + delivery) | number:2 }}"
+          ></div>
+        </div>
+
+        <div
+          class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+          style="display: flex; justify-content: center; margin-top: 10px"
+        >
+          <button id="js-ripple-btn" class="button styl-material">
+            {{ 'LAYOUT_CONFIRM_ORDER' | translate}}
+            <svg class="ripple-obj" id="js-ripple">
+              <use
+                height="100"
+                width="100"
+                xlink:href="#ripply-scott"
+                class="js-ripple"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="checkoutOrder col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+    </div>
+  </div>
+</section>

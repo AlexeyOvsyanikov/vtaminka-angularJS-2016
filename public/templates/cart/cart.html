@@ -1,0 +1,84 @@
+<section>
+    <div class="bannerSlim" style="background-image: url('images/banner.png'); background-position-y: 55%;">
+        <div class="bannerWrap"></div>
+        <h2 translate>LAYOUT_CART_TITLE</h2>
+    </div>
+    <div class="wrapper clearfix">
+        <!-- SVG Sprite -->
+        <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w2.org/2000/svg" xmlns:xlink="http://www.w2.org/1999/xlink" focusable="false">
+                        <symbol id="ripply-scott" viewBox="0 0 100 100">
+                                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+                        </symbol>
+                </svg>
+        </div>
+
+        <div class="breadCrumbs">
+            <a ui-sref="home" translate>LAYOUT_MAIN_LINK</a>
+            <div class="delimeter"></div>
+            <a ui-sref="cart" translate>LAYOUT_CART_TITLE</a>
+        </div>
+
+        <div class="clearfix productCartRow" ng-repeat="product in cartForView">
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 productImg cartCol">
+                <img src="images/vitamin1.png" alt="">
+            </div>
+            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 productCartText cartCol">
+
+                <div class="productBlock">
+                    <h3>{{product.ProductTitle}}</h3>
+                    <p class="text-justify">{{product.description}}</p>
+                </div>
+
+            </div> 
+            
+            <div class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol" ng-bind-template="${{product.ProductPrice | number:2}}">
+            </div>
+
+            <div class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol">
+                <input class="input" type="text" ng-model="product.amount" ng-change="amountChanged(product , product.amount)">
+            </div>
+            <div class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol" ng-bind-template="${{ (product.ProductPrice * product.amount)  | number:2}}">
+            </div>
+
+            <div ng-click="removeFromCart(product.ProductID)" style="cursor: pointer;" class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol cartDelete">
+               s
+            </div>                
+
+        </div>    
+
+        <div class="clearfix">
+            <div class="clearfix productCartRow cartAllCount">
+
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 productCartText cartCol">
+
+                    <h3 class="text-left" style="margin-bottom: 0px;" translate>LAYOUT_CART_TOTAL</h3>
+                    
+                </div> 
+
+                <div class="text-center empty col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol">
+                </div>
+
+                <div class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol">
+                    {{cartTotalItemsAmount}}
+                </div>
+
+                <div class="text-center col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol" ng-bind-template="${{cartTotal | number:2}}">
+                </div>
+
+                <div class="text-center empty col-lg-1 col-md-1 col-sm-1 col-xs-12 productCartText cartCol">
+                </div>  
+            </div>
+        </div>
+
+        <div class="clearfix">
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <button ng-click="gotoCheckout()" style="width: 250px !important;" ng-click="AddProduct(product)" id="js-ripple-btn" class="button styl-material">
+                    {{'LAYOUT_CHECKOUT' | translate}}
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>

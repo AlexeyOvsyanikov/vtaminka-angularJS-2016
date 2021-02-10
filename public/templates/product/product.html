@@ -1,0 +1,70 @@
+<section>
+  <div
+    class="bannerSlim"
+    style="
+      background-image: url('images/banner.png');
+      background-position-y: 55%;
+    "
+  >
+    <div class="bannerWrap"></div>
+    <h2>{{product.ProductTitle}}</h2>
+  </div>
+  <div class="wrapper clearfix">
+    <!-- SVG Sprite -->
+    <div
+      style="height: 0; width: 0; position: absolute; visibility: hidden"
+      aria-hidden="true"
+    >
+      <svg
+        version="1.1"
+        xmlns="http://www.w2.org/2000/svg"
+        xmlns:xlink="http://www.w2.org/1999/xlink"
+        focusable="false"
+      >
+        <symbol id="ripply-scott" viewBox="0 0 100 100">
+          <circle id="ripple-shape" cx="1" cy="1" r="1" />
+        </symbol>
+      </svg>
+    </div>
+
+    <div class="clearfix product">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 productImg">
+        <img src="images/vitamin1.png" alt="" />
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 productText">
+        <div class="productBlock">
+          <h3
+            class="productPrice"
+            ng-bind-template="${{product.ProductPrice}}"
+          ></h3>
+          <div  class="productToCart">
+            
+            <div ng-show="!product.isInCart" class="clearfix buttonBlock">
+              <input class="input" type="text" value="1" ng-model="product.amount" ng-change="amountChanged(product.amount)"/>
+              <button ng-click="addToCart()" id="js-ripple-btn" class="button styl-material">
+                {{'LAYOUT_PRODUCT_ADD_IN_CART' | translate}}
+                <svg class="ripple-obj" id="js-ripple">
+                  <use
+                    height="100"
+                    width="100"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="#ripply-scott"
+                    class="js-ripple"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+
+            <div ng-show="product.isInCart" class="clearfix buttonBlock">
+                <div class="inCart text-center" translate>LAYOUT_PRODUCT_IN_CART</div>
+            </div>
+          </div>
+
+          <h3 translate>LAYOUT_PRODUCT_DESCRIPTION</h3>
+          <p>{{product.description}}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
