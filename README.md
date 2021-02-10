@@ -9,11 +9,11 @@ In webpack.config.js change mode to production
 Check HOST constant in application/app.js and change if need and then "npm run build"
 
 #### Change paths in index.html:
-- href="vendor.css"
+- < link href="vendor.css" />
 - <script src="vendor.js"></script>
 - <script src="index.js"></script>
   
 #### On:
-- href="public/vendor.css"
+- < link href="public/vendor.css" />
 - <script src="public/vendor.js"></script>
 - <script src="public/index.js"></script>
